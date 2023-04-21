@@ -1,0 +1,51 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.trainers_page {
+  padding-top: 19rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 12rem;
+    @include breakpoint("md") {
+      grid-template-columns: 1fr 1fr;
+     }
+    @include breakpoint("sm") {
+      grid-template-columns: 1fr;
+     }
+    .trainers_card {
+
+      padding: 1rem;
+
+      .image_wrapper {
+        border-top-right-radius: 2rem;
+        overflow: hidden;
+      }
+
+      .name {
+        padding: 1rem 0 0.5rem;
+        color: $gray1;
+      }
+
+      .job {
+        padding: 0 0 2rem;
+        color: $gray3;
+      }
+
+      .socials {
+        display: flex;
+        font-size: 1.5rem;
+        gap: 0.5rem;
+
+        svg {
+          color: $secondary;
+        }
+      }
+
+
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.hero {
+
+    // height: calc(100vh - 4rem);
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+
+
+    @include breakpoint("md") {
+        gap: 4rem;
+    }
+
+    @include breakpoint("sm") {
+        grid-template-columns: 1fr;
+    }
+
+    .hero_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .link {
+            color: $orange;
+        }
+
+        .title {
+            margin-top: 0.5rem;
+            color: $gray1;
+        }
+
+        .text {
+            padding: 1rem 0 3rem;
+            color: $gray3;
+            letter-spacing: 0.1rem
+        }
+
+        .btn {
+            @include btn-large;
+        }
+    }
+
+    .hero_right {
+        @include breakpoint("sm") {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .circle {
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            background: rgb(0, 56, 64);
+            background: linear-gradient(290deg, rgba(0, 56, 64, 0.5) 28%, rgb(190, 99, 34) 90%);
+            transition: all 2s linear;
+
+            &:hover {
+                transform: rotate(5deg) scale(1.2);
+            }
+
+            @include breakpoint("md") {
+                width: 25rem;
+                height: 25rem;
+            }
+
+            @include breakpoint("sm") {
+                width: 20rem;
+                height: 20rem;
+            }
+
+        }
+    }
+}

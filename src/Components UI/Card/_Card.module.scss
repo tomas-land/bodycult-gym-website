@@ -1,0 +1,17 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+
+.card {
+    background-color: $primary-medium;
+    border-radius: 0rem 3rem;
+    @include flex-center;
+    flex-direction: column;
+    box-shadow: $main-shadow;
+    border: 1px solid transparent;
+    transition: $transition5;
+    &:hover{
+        border: 1px solid $gray1;
+        background-color: $primary-light;
+        transform: scale(1.02);
+    }
+}

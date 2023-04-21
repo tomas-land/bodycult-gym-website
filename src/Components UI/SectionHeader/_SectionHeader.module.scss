@@ -1,0 +1,27 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+
+.section_header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3rem;
+    @include breakpoint("sm") {
+        justify-content: center;
+       }
+    .icon {
+        display: flex;
+        padding: 0.7rem 0.7rem;
+        font-size: 2rem;
+        background-color: $primary-medium;
+        border-radius: $border-radius1;
+        color: $secondary;
+        margin-right: $spacing-md;
+    }
+
+    .title {
+        color: $gray1;
+    }
+}
+.centered {
+justify-content: center;
+}

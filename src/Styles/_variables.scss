@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+//fonts
+$font-roboto: 'Roboto',
+sans-serif;
+$font-montserrat: 'Montserrat',
+sans-serif;
+$font-lobster: 'Lobster',
+sans-serif;
+$font-racing-bold: 'Racing Sans One',
+cursive;
+;
+//colors
+$primary-dark :#003840;
+$primary-medium :hsl(180.66, 100%, 17.84%);
+$primary-light :hsl(174.78, 100%, 22.55%);
+$secondary :hsl(162.44, 97.62%, 32.94%);
+$secondary-dark :hsl(168.86, 100%, 27.45%);
+$gray1 :hsl(208, 37%, 85%);  //headings
+$gray2 :hsl(210, 17%, 72%);  //texts
+$gray3 :hsl(210, 12%, 63%);
+$orange:#be6322;
+//spacing
+$spacing-sm:0.5rem;
+$spacing-md:1rem;
+$spacing-lg:2rem;
+//containers
+$container-sm:50%;
+$container-md:70%;
+$container-lg:90%;
+// misc
+$transition10:all 1s linear;
+$transition5:all 0.5s linear;
+$border-radius1: 1rem;
+$border-radius2: 1.5rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$main-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.4);
+
+

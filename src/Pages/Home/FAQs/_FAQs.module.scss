@@ -1,0 +1,20 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.faqs {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        row-gap: 1rem;
+        align-items: flex-start;
+        @include breakpoint("md"){
+         grid-template-columns: 1fr;         
+        }
+    }
+
+
+
+
+}

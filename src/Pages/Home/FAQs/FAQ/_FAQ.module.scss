@@ -1,0 +1,37 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.faq {
+    background-color: $primary-medium;
+    padding: 1.5rem 1rem;
+    border-radius: $border-radius1;
+    cursor: pointer;
+
+    .question {
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+            color: $gray1;
+        }
+
+        .question_text {
+            color: $gray1;
+        }
+
+    }
+
+    .answer {
+        display: none;
+        margin-top: 1rem;
+
+        .answer_text {
+            color: $gray3;
+        }
+    }
+
+    .show_answer {
+        display: block;
+    }
+}

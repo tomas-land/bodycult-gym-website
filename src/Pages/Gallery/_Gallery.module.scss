@@ -1,0 +1,31 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.gallery_page {
+  padding-top: 19rem;
+
+  .grid {
+    margin-bottom: 12rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include breakpoint("md") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint("sm") {
+      grid-template-columns: 1fr;
+    }
+
+    .image {
+      border: solid 0.5rem transparent;
+      transition: $transition5;
+
+      &:hover {
+        border: solid 0.5rem $secondary-dark;
+
+      }
+    }
+  }
+}

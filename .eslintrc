@@ -1,0 +1,58 @@
+{
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules":{  //more rules (https://eslint.org/docs/latest/rules/)
+      "no-unused-vars":"warn", // show unused variables: shows error
+      // "no-console": "warn", // remembers of console.log in code
+      "quotes": ["warn","double"], // single qoutes required
+      "jsx-quotes": ["warn","prefer-double"], //  qoutes in jsx
+      // "prefer-const": "error", //  if let variable is used once, suggests to use const 
+      // "indent":["warn", 2], // if code indentation is more than two spaces , show error
+      // // "max-len":["warn", {"code":120}], // if line length longer than 120 symbols show error
+      // "max-len": [2, 120, {
+      //   "ignoreStrings": true,
+      //   "ignoreTemplateLiterals": true,
+      //   "ignoreComments": true
+      // }],
+      "import/order":["warn",{        // rules from eslint-plugin-import ( this plugin extends eslint rules and is built-in react) (https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.mdf)
+        "groups":["builtin"
+        ,"internal"
+        ,"external"
+        ,["parent"
+         ,"sibling"]
+        //  ,"index" 
+        //  ,"object"
+        //  ,"type"
+      ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin"
+            // "position": "before"
+          },
+          {
+            "pattern": "react**",
+            "group": "external"
+          },
+          {
+            "pattern": "Components",
+            "group": "internal"
+          },
+          {
+            "pattern": "Components UI",
+            "group": "internal"
+          }
+      
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+      ]
+    }
+  }

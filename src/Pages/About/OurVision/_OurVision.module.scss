@@ -1,0 +1,62 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.ourVision {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  gap: 10%;
+  padding-bottom: 12rem;
+
+  @include breakpoint("md") {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint("md") {
+      margin-bottom: 3rem;
+    }
+
+    .image {
+      transform: skew(15deg);
+      transition: $transition5;
+
+      @include breakpoint("md") {
+        width: 60%;
+      }
+
+      @include breakpoint("sm") {
+        width: 100%;
+        transform: skew(0);
+      }
+
+      &:hover {
+        transform: skew(0);
+      }
+    }
+  }
+
+  .right {
+    .title {
+      color: $gray1;
+      margin-bottom: 2rem;
+
+      @include breakpoint("md") {
+        text-align: center;
+      }
+    }
+
+    .text {
+      color: $gray3;
+      margin-bottom: 1rem;
+
+      @include breakpoint("md") {
+        text-align: center;
+      }
+    }
+  }
+}

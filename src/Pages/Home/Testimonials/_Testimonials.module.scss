@@ -1,0 +1,89 @@
+@import 'Styles/_variables';
+@import 'Styles/_mixins';
+@import 'Styles/App.scss';
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12rem;
+
+  .card {
+    position: relative;
+    margin: auto;
+    width: 40rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include breakpoint("md"){
+                  width: 30rem;
+    }
+    @include breakpoint("md"){
+                  width: 90%;
+    }
+
+    .avatar {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      top: 0;
+      border: 1px solid transparent;
+      transition: $transition5;
+
+    }
+
+    &:hover .avatar {
+      border: 1px solid $gray1;
+    }
+
+    .quote {
+      padding: 4rem 0rem 2rem;
+      margin: 0rem 3rem;
+      text-align: center;
+      color: $gray2;
+      line-height: 1.5rem;
+      font-style: italic;
+    }
+
+    .job {
+      color: $gray2;
+    }
+
+    .name {
+      color: $gray1;
+      padding: 0.3rem 0rem 2rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .left {
+      background: transparent;
+      box-shadow: $main-shadow;
+      color: $secondary-dark;
+      font-size: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    .right {
+      background: transparent;
+      box-shadow: $main-shadow;
+      color: $secondary-dark;
+      font-size: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+
+  }
+}
